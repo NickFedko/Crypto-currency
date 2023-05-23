@@ -1,0 +1,279 @@
+@font-face {
+    font-family: 'Rubik Regular';
+    src: url('../fonts/Rubik-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Rubik Bold';
+    src: url('../fonts/Rubik-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Rubik SemiBold';
+    src: url('../fonts/Rubik-SemiBold.ttf');
+}
+
+$background-main: radial-gradient(#2C35A2 1%, #252C88 16%, #1B2167 40%, #15194F 62%, #101540 83%, #0F133B 100%);
+$background-secondary: #CEEDFF;
+$background-white: #FBFBFB;
+
+
+$font-color-white: #FBFBFB;
+$font-color-bright-blue: #6DE0F6;
+$font-color-black: #040404;
+$font-color-grey: #8B8B8B;
+
+$header-auth-button-border-radius: 20px;
+$header-auth-button-bg: #6DE0F6;
+$header-auth-button-hover-border: 2px solid #6DE0F6;
+
+$main-exchange-interaction-button-bg: #D4088C;
+$main-exchange-interaction-button-border-radius: 28px;
+$main-exchange-interaction-inputs-block-bg: #CEEDFF; 
+$main-exchange-interaction-inputs-block-border-radius: 4px;
+
+$main-treasure-treasures-block-border-radius: 12px;
+
+$font-size-h1: 40px;
+$font-size-h2: 30px;
+$font-size-h3: 24px;
+$font-size-largest: 22px;
+$font-size-large: 18px;
+$font-size-medium: 16px;
+$font-size-small: 14px;
+$font-size-smallest: 12px;
+
+
+body {
+    font-family: 'Rubik Regular', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: $background-main;
+    background-repeat: no-repeat;
+    color: $font-color-white;
+    padding: 0;
+    margin: 0;
+    .header {
+        padding: 30px 0;
+        max-width: 1280px;
+        display: grid;
+        grid-template-columns:  1fr 4fr 1fr;
+        grid-column-gap: 24px;
+        align-items: center;
+        color: $font-color-white;
+        .header__logo {
+            display: flex;
+            align-items: center;
+            label {
+                margin-left: 16px;
+                font-size: $font-size-largest;
+                color: $font-color-bright-blue;
+                line-height: 24px;
+            }
+        }
+        .header__nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            a {
+                font-size: $font-size-medium;
+            }
+        }
+        .header__auth {
+            display: flex;
+            justify-content: space-between;
+            button {
+                margin-left: 30px;
+                width: 146px;
+                height: 38px;
+                box-sizing: border-box;
+                border-radius: $header-auth-button-border-radius;
+                background-color: transparent;
+                border: $header-auth-button-hover-border;
+                font-size: $font-size-large;
+                color: $font-color-white;
+                transition: 0.3s all ease-in-out;
+            }
+            button:hover {
+                background-color: $header-auth-button-bg;
+                color: $font-color-black;
+            }
+        }
+    }
+    .main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        .main__exchange {
+            max-width: 1280px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            .main__exchange__interaction {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                h1 {
+                    align-self: flex-start;
+                    width: 80%;
+                    font-size: $font-size-h1;
+                }
+                p {
+                    align-self: flex-start;
+                    font-size: $font-size-large;
+                }
+                button {
+                    width: 372px;
+                    margin-top: 40px;
+                    height: 48px;
+                    text-transform: uppercase;
+                    font-size: $font-size-large;
+                    color: $font-color-white;
+                    background: $main-exchange-interaction-button-bg;
+                    border: none;
+                    border-radius: $header-auth-button-border-radius;
+                }
+                .main__exchange__interaction__agreement {
+                    display: flex;
+                    p {
+                        margin-left: 8px;
+                        a {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+                .main__exchange__interaction__inputs {
+                    display: flex;
+                    position: relative;
+                    img {
+                        position: absolute;
+                        top: 100px;
+                        left: 290px;
+                    }
+                    .main__exchange__interaction__inputs__block {
+                        margin-top: 20px;
+                        p {
+                            font-size: $font-size-small;
+                            margin: 6px 0;
+                        }
+                        input,select {
+                            width: 280px;
+                            height: 48px;
+                            box-sizing: border-box;
+                            padding-left: 10px;
+                            background-color: $main-exchange-interaction-inputs-block-bg;
+                            margin-bottom: 32px;
+                            border: none;
+                            border-radius: $main-exchange-interaction-inputs-block-border-radius;
+                            font-size: $font-size-large;
+                        }
+                        label {
+                            text-align: end;
+                            font-size: $font-size-large;
+                            span {
+                                color: $font-color-grey;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .main__about {
+            color: $font-color-black;
+            padding: 100px 0 180px 0;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .main__about__block {
+                max-width: 1280px;
+            }
+            h2 {
+                font-size: $font-size-h2;
+            }
+            p {
+                font-size: $font-size-largest;
+                width: 80%;
+            }
+            .main__about__exchangers {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                .main__about__exchangers__block {
+                    display: flex;
+                    align-items: center;
+                    margin-top: 36px;
+                    img {
+                        width: 48px;
+                        width: 48px;
+                        object-fit: contain;
+                        margin-right: 16px;
+                    }
+                    p {
+                        font-size: $font-size-large;
+                    }
+                }
+            }
+        }
+        .main__about::before {
+            content: "";
+            position: absolute;
+            width: 120%;
+            height: 100%;
+            top: -10%;
+            z-index: -1;
+            transform: rotate(-2deg);
+            background: $background-secondary 0 0 repeat;
+        }
+        .main__treasury {
+            max-width: 1280px;
+            padding-bottom: 120px;
+            h2 {
+                font-size: $font-size-h2;
+                margin-bottom: 48px;
+            }
+            .main__treasury__treasures {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-column-gap: 16px;
+                grid-row-gap: 32px;
+                .main__treasury__treasures__block {
+                    box-sizing: border-box;
+                    padding: 0 20px;
+                    width: 540px;
+                    height: 72px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    color: $font-color-black;
+                    background: $background-white;
+                    border-radius: $main-treasure-treasures-block-border-radius;
+                    .main__treasury__treasures__block__title {
+                        display: flex;
+                        align-items: center;
+                    }
+                    img {
+                        width: 48px;
+                        height: 48px;
+                        object-fit: contain;
+                    }
+                    p {
+                        margin-left: 16px;
+                        font-size: $font-size-largest;
+                    }
+                    label {
+                        font-size: $font-size-largest;
+                        span {
+                            font-size: $font-size-large;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

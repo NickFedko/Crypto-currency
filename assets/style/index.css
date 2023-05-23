@@ -1,0 +1,247 @@
+@font-face {
+  font-family: "Rubik Regular";
+  src: url("../fonts/Rubik-Regular.ttf");
+}
+@font-face {
+  font-family: "Rubik Bold";
+  src: url("../fonts/Rubik-Bold.ttf");
+}
+@font-face {
+  font-family: "Rubik SemiBold";
+  src: url("../fonts/Rubik-SemiBold.ttf");
+}
+body {
+  font-family: "Rubik Regular", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(#2C35A2 1%, #252C88 16%, #1B2167 40%, #15194F 62%, #101540 83%, #0F133B 100%);
+  background-repeat: no-repeat;
+  color: #FBFBFB;
+  padding: 0;
+  margin: 0;
+}
+body .header {
+  padding: 30px 0;
+  max-width: 1280px;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-column-gap: 24px;
+  align-items: center;
+  color: #FBFBFB;
+}
+body .header .header__logo {
+  display: flex;
+  align-items: center;
+}
+body .header .header__logo label {
+  margin-left: 16px;
+  font-size: 22px;
+  color: #6DE0F6;
+  line-height: 24px;
+}
+body .header .header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .header .header__nav a {
+  font-size: 16px;
+}
+body .header .header__auth {
+  display: flex;
+  justify-content: space-between;
+}
+body .header .header__auth button {
+  margin-left: 30px;
+  width: 146px;
+  height: 38px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 2px solid #6DE0F6;
+  font-size: 18px;
+  color: #FBFBFB;
+  transition: 0.3s all ease-in-out;
+}
+body .header .header__auth button:hover {
+  background-color: #6DE0F6;
+  color: #040404;
+}
+body .main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+body .main .main__exchange {
+  max-width: 1280px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+body .main .main__exchange .main__exchange__interaction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .main .main__exchange .main__exchange__interaction h1 {
+  align-self: flex-start;
+  width: 80%;
+  font-size: 40px;
+}
+body .main .main__exchange .main__exchange__interaction p {
+  align-self: flex-start;
+  font-size: 18px;
+}
+body .main .main__exchange .main__exchange__interaction button {
+  width: 372px;
+  margin-top: 40px;
+  height: 48px;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #FBFBFB;
+  background: #D4088C;
+  border: none;
+  border-radius: 20px;
+}
+body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__agreement {
+  display: flex;
+}
+body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__agreement p {
+  margin-left: 8px;
+}
+body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__agreement p a {
+  text-decoration: underline;
+}
+body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs {
+  display: flex;
+  position: relative;
+}
+body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs img {
+  position: absolute;
+  top: 100px;
+  left: 290px;
+}
+body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs .main__exchange__interaction__inputs__block {
+  margin-top: 20px;
+}
+body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs .main__exchange__interaction__inputs__block p {
+  font-size: 14px;
+  margin: 6px 0;
+}
+body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs .main__exchange__interaction__inputs__block input, body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs .main__exchange__interaction__inputs__block select {
+  width: 280px;
+  height: 48px;
+  box-sizing: border-box;
+  padding-left: 10px;
+  background-color: #CEEDFF;
+  margin-bottom: 32px;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+}
+body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs .main__exchange__interaction__inputs__block label {
+  text-align: end;
+  font-size: 18px;
+}
+body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs .main__exchange__interaction__inputs__block label span {
+  color: #8B8B8B;
+}
+body .main .main__about {
+  color: #040404;
+  padding: 100px 0 180px 0;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .main .main__about .main__about__block {
+  max-width: 1280px;
+}
+body .main .main__about h2 {
+  font-size: 30px;
+}
+body .main .main__about p {
+  font-size: 22px;
+  width: 80%;
+}
+body .main .main__about .main__about__exchangers {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+body .main .main__about .main__about__exchangers .main__about__exchangers__block {
+  display: flex;
+  align-items: center;
+  margin-top: 36px;
+}
+body .main .main__about .main__about__exchangers .main__about__exchangers__block img {
+  width: 48px;
+  width: 48px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-right: 16px;
+}
+body .main .main__about .main__about__exchangers .main__about__exchangers__block p {
+  font-size: 18px;
+}
+body .main .main__about::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 100%;
+  top: -10%;
+  z-index: -1;
+  transform: rotate(-2deg);
+  background: #CEEDFF 0 0 repeat;
+}
+body .main .main__treasury {
+  max-width: 1280px;
+  padding-bottom: 120px;
+}
+body .main .main__treasury h2 {
+  font-size: 30px;
+  margin-bottom: 48px;
+}
+body .main .main__treasury .main__treasury__treasures {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 32px;
+}
+body .main .main__treasury .main__treasury__treasures .main__treasury__treasures__block {
+  box-sizing: border-box;
+  padding: 0 20px;
+  width: 540px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #040404;
+  background: #FBFBFB;
+  border-radius: 12px;
+}
+body .main .main__treasury .main__treasury__treasures .main__treasury__treasures__block .main__treasury__treasures__block__title {
+  display: flex;
+  align-items: center;
+}
+body .main .main__treasury .main__treasury__treasures .main__treasury__treasures__block img {
+  width: 48px;
+  height: 48px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body .main .main__treasury .main__treasury__treasures .main__treasury__treasures__block p {
+  margin-left: 16px;
+  font-size: 22px;
+}
+body .main .main__treasury .main__treasury__treasures .main__treasury__treasures__block label {
+  font-size: 22px;
+}
+body .main .main__treasury .main__treasury__treasures .main__treasury__treasures__block label span {
+  font-size: 18px;
+}/*# sourceMappingURL=index.css.map */
