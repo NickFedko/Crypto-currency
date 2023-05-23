@@ -200,7 +200,7 @@ body .main .main__about::before {
   background: #CEEDFF 0 0 repeat;
 }
 body .main .main__treasury {
-  max-width: 1280px;
+  width: 1280px;
   padding-bottom: 120px;
 }
 body .main .main__treasury h2 {
@@ -212,11 +212,13 @@ body .main .main__treasury .main__treasury__treasures {
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 16px;
   grid-row-gap: 32px;
+  justify-content: center;
+  align-items: center;
 }
 body .main .main__treasury .main__treasury__treasures .main__treasury__treasures__block {
   box-sizing: border-box;
   padding: 0 20px;
-  width: 540px;
+  width: 600px;
   height: 72px;
   display: flex;
   align-items: center;

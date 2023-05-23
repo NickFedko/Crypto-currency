@@ -231,7 +231,7 @@ body {
             background: $background-secondary 0 0 repeat;
         }
         .main__treasury {
-            max-width: 1280px;
+            width: 1280px;
             padding-bottom: 120px;
             h2 {
                 font-size: $font-size-h2;
@@ -242,10 +242,12 @@ body {
                 grid-template-columns: 1fr 1fr;
                 grid-column-gap: 16px;
                 grid-row-gap: 32px;
+                justify-content: center;
+                align-items: center;
                 .main__treasury__treasures__block {
                     box-sizing: border-box;
                     padding: 0 20px;
-                    width: 540px;
+                    width: 600px;
                     height: 72px;
                     display: flex;
                     align-items: center;
