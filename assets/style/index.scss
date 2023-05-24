@@ -485,6 +485,9 @@ body {
                 button:nth-of-type(2) {
                     display: none;
                 }
+                .header__nav__menu {
+                    text-align: left;
+                }
                 .header__nav__menu__btn {
                     span {
                         width: 24px;
@@ -500,7 +503,7 @@ body {
         }
         .main {
             .main__exchange {
-                max-width: 304px;;;
+                max-width: 296px;
                 grid-template-columns: 1fr;
                 justify-content: center;
                 img {
@@ -521,7 +524,7 @@ body {
                         }
                         .main__exchange__interaction__inputs__block {
                             input, select {
-                                width: 304px;;;
+                                width: 296px;
                                 height: 40px;
                                 padding-left: 8px;
                                 font-size: $font-size-medium;
@@ -553,7 +556,7 @@ body {
                     font-size: $font-size-medium;
                 }
                 .main__about__block {
-                    max-width: 304px;;;
+                    max-width: 296px;
                     .main__about__exchangers {
                         grid-template-columns: 1fr 1fr;
                         grid-column-gap: 8px;
@@ -569,11 +572,11 @@ body {
                 }
             }
             .main__treasury {
-                width: 304px;;;
+                width: 296px;
                 .main__treasury__treasures {
                     grid-template-columns: 1fr;
                     .main__treasury__treasures__block {
-                        width: 304px;;;
+                        width: 296px;
                         p {
                             font-size: $font-size-smallest;
                         }
