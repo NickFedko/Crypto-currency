@@ -534,6 +534,10 @@ body .main .main__treasury .main__treasury__treasures .main__treasury__treasures
   body .main .main__treasury .main__treasury__treasures .main__treasury__treasures__block {
     width: 296px;
   }
+  body .main .main__treasury .main__treasury__treasures .main__treasury__treasures__block img {
+    width: 24px;
+    height: 24px;
+  }
   body .main .main__treasury .main__treasury__treasures .main__treasury__treasures__block .main__treasury__treasures__block__title p {
     margin-left: 6px;
   }
@@ -542,6 +546,8 @@ body .main .main__treasury .main__treasury__treasures .main__treasury__treasures
   }
   body .main .main__treasury .main__treasury__treasures .main__treasury__treasures__block label {
     pointer-events: none;
+    text-decoration: none;
+    color: #040404;
     font-size: 12px;
   }
   body .main .main__treasury .main__treasury__treasures .main__treasury__treasures__block label span {

@@ -44,6 +44,7 @@ $font-size-large: 18px;
 $font-size-medium: 16px;
 $font-size-small: 14px;
 $font-size-smallest: 12px;
+$font-size-smallest-mobile: 10px;
 
 
 body {
@@ -596,6 +597,10 @@ body {
                     grid-template-columns: 1fr;
                     .main__treasury__treasures__block {
                         width: 296px;
+                        img {
+                            width: 24px;
+                            height: 24px;
+                        }
                         .main__treasury__treasures__block__title {
                             p {
                               margin-left: 6px;  
@@ -606,6 +611,8 @@ body {
                         }
                         label {
                             pointer-events: none;
+                            text-decoration: none;
+                            color: $font-color-black;
                             font-size: $font-size-smallest;
                             span {
                                 font-size: $font-size-smallest;
