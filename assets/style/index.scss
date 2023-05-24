@@ -480,7 +480,7 @@ body {
             .header__auth {
                 button {
                     width: 80px;
-                    font-size: $font-size-small;
+                    font-size: $font-size-smallest;
                 }
                 button:nth-of-type(2) {
                     display: none;
@@ -489,6 +489,7 @@ body {
                     text-align: left;
                 }
                 .header__nav__menu__btn {
+                    margin-left: 8px;
                     span {
                         width: 24px;
                     }
@@ -523,7 +524,7 @@ body {
                         img {
                             display: block;
                             top: 160px;
-                            left: 144px;
+                            left: 136px;
                             transform: rotate(90deg);
                         }
                         .main__exchange__interaction__inputs__block {

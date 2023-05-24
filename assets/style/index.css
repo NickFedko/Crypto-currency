@@ -430,13 +430,16 @@ body .main .main__treasury .main__treasury__treasures .main__treasury__treasures
   }
   body .header .header__auth button {
     width: 80px;
-    font-size: 14px;
+    font-size: 12px;
   }
   body .header .header__auth button:nth-of-type(2) {
     display: none;
   }
   body .header .header__auth .header__nav__menu {
     text-align: left;
+  }
+  body .header .header__auth .header__nav__menu__btn {
+    margin-left: 8px;
   }
   body .header .header__auth .header__nav__menu__btn span {
     width: 24px;
@@ -469,7 +472,7 @@ body .main .main__treasury .main__treasury__treasures .main__treasury__treasures
   body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs img {
     display: block;
     top: 160px;
-    left: 144px;
+    left: 136px;
     transform: rotate(90deg);
   }
   body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs .main__exchange__interaction__inputs__block input, body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs .main__exchange__interaction__inputs__block select {
