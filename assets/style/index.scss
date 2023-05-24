@@ -476,8 +476,12 @@ body {
     body {
         text-align: center;
         .header {
-            max-width: 320px;
+            max-width: 296px;
             .header__auth {
+                button {
+                    width: 80px;
+                    font-size: $font-size-small;
+                }
                 button:nth-of-type(2) {
                     display: none;
                 }
@@ -496,7 +500,7 @@ body {
         }
         .main {
             .main__exchange {
-                max-width: 320px;
+                max-width: 304px;;;
                 grid-template-columns: 1fr;
                 justify-content: center;
                 img {
@@ -517,7 +521,7 @@ body {
                         }
                         .main__exchange__interaction__inputs__block {
                             input, select {
-                                width: 320px;
+                                width: 304px;;;
                                 height: 40px;
                                 padding-left: 8px;
                                 font-size: $font-size-medium;
@@ -549,7 +553,7 @@ body {
                     font-size: $font-size-medium;
                 }
                 .main__about__block {
-                    max-width: 320px;
+                    max-width: 304px;;;
                     .main__about__exchangers {
                         grid-template-columns: 1fr 1fr;
                         grid-column-gap: 8px;
@@ -565,11 +569,11 @@ body {
                 }
             }
             .main__treasury {
-                width: 320px;
+                width: 304px;;;
                 .main__treasury__treasures {
                     grid-template-columns: 1fr;
                     .main__treasury__treasures__block {
-                        width: 320px;
+                        width: 304px;;;
                         p {
                             font-size: $font-size-smallest;
                         }

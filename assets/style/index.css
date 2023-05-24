@@ -426,7 +426,11 @@ body .main .main__treasury .main__treasury__treasures .main__treasury__treasures
     text-align: center;
   }
   body .header {
-    max-width: 320px;
+    max-width: 296px;
+  }
+  body .header .header__auth button {
+    width: 80px;
+    font-size: 14px;
   }
   body .header .header__auth button:nth-of-type(2) {
     display: none;
@@ -441,7 +445,7 @@ body .main .main__treasury .main__treasury__treasures .main__treasury__treasures
     top: calc(50% + 8px);
   }
   body .main .main__exchange {
-    max-width: 320px;
+    max-width: 304px;
     grid-template-columns: 1fr;
     justify-content: center;
   }
@@ -462,7 +466,7 @@ body .main .main__treasury .main__treasury__treasures .main__treasury__treasures
     transform: rotate(90deg);
   }
   body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs .main__exchange__interaction__inputs__block input, body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs .main__exchange__interaction__inputs__block select {
-    width: 320px;
+    width: 304px;
     height: 40px;
     padding-left: 8px;
     font-size: 16px;
@@ -485,7 +489,7 @@ body .main .main__treasury .main__treasury__treasures .main__treasury__treasures
     font-size: 16px;
   }
   body .main .main__about .main__about__block {
-    max-width: 320px;
+    max-width: 304px;
   }
   body .main .main__about .main__about__block .main__about__exchangers {
     grid-template-columns: 1fr 1fr;
@@ -498,13 +502,13 @@ body .main .main__treasury .main__treasury__treasures .main__treasury__treasures
     font-size: 14px;
   }
   body .main .main__treasury {
-    width: 320px;
+    width: 304px;
   }
   body .main .main__treasury .main__treasury__treasures {
     grid-template-columns: 1fr;
   }
   body .main .main__treasury .main__treasury__treasures .main__treasury__treasures__block {
-    width: 320px;
+    width: 304px;
   }
   body .main .main__treasury .main__treasury__treasures .main__treasury__treasures__block p {
     font-size: 12px;
