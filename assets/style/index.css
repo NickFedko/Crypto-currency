@@ -459,13 +459,17 @@ body .main .main__treasury .main__treasury__treasures .main__treasury__treasures
     width: 100%;
     font-size: 26px;
   }
+  body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__agreement {
+    justify-content: center;
+    align-items: center;
+  }
   body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs {
     flex-direction: column;
   }
   body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs img {
     display: block;
     top: 160px;
-    left: 152px;
+    left: 144px;
     transform: rotate(90deg);
   }
   body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs .main__exchange__interaction__inputs__block input, body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs .main__exchange__interaction__inputs__block select {
@@ -500,6 +504,7 @@ body .main .main__treasury .main__treasury__treasures .main__treasury__treasures
   }
   body .main .main__about .main__about__block .main__about__exchangers__block img {
     width: 32px;
+    margin-right: 4px;
   }
   body .main .main__about .main__about__block .main__about__exchangers__block p {
     font-size: 14px;
@@ -513,10 +518,14 @@ body .main .main__treasury .main__treasury__treasures .main__treasury__treasures
   body .main .main__treasury .main__treasury__treasures .main__treasury__treasures__block {
     width: 296px;
   }
+  body .main .main__treasury .main__treasury__treasures .main__treasury__treasures__block .main__treasury__treasures__block__title p {
+    margin-left: 6px;
+  }
   body .main .main__treasury .main__treasury__treasures .main__treasury__treasures__block p {
     font-size: 12px;
   }
   body .main .main__treasury .main__treasury__treasures .main__treasury__treasures__block label {
+    pointer-events: none;
     font-size: 12px;
   }
   body .main .main__treasury .main__treasury__treasures .main__treasury__treasures__block label span {

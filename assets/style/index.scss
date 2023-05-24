@@ -514,12 +514,16 @@ body {
                         width: 100%;
                         font-size: $font-size-h1-mobile;
                     }
+                    .main__exchange__interaction__agreement {
+                        justify-content: center;
+                        align-items: center;
+                    }
                     .main__exchange__interaction__inputs {
                         flex-direction: column;
                         img {
                             display: block;
                             top: 160px;
-                            left: 152px;
+                            left: 144px;
                             transform: rotate(90deg);
                         }
                         .main__exchange__interaction__inputs__block {
@@ -564,6 +568,7 @@ body {
                     .main__about__exchangers__block {
                         img {
                             width: 32px;
+                            margin-right: 4px;
                         }
                         p {
                             font-size: $font-size-small;
@@ -577,10 +582,16 @@ body {
                     grid-template-columns: 1fr;
                     .main__treasury__treasures__block {
                         width: 296px;
+                        .main__treasury__treasures__block__title {
+                            p {
+                              margin-left: 6px;  
+                            }
+                        }
                         p {
                             font-size: $font-size-smallest;
                         }
                         label {
+                            pointer-events: none;
                             font-size: $font-size-smallest;
                             span {
                                 font-size: $font-size-smallest;
