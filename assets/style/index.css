@@ -53,6 +53,85 @@ body .header .header__auth {
   display: flex;
   justify-content: space-between;
 }
+body .header .header__auth .header__nav__menu {
+  z-index: 1;
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 90%;
+  right: 0;
+  top: 0;
+  padding: 40px 80px;
+  background-color: #CEEDFF;
+  transform: translateX(100%);
+  transition: transform 0.5s;
+}
+body .header .header__auth .header__nav__menu .header__nav__menu__profile {
+  display: flex;
+  align-items: center;
+}
+body .header .header__auth .header__nav__menu .header__nav__menu__profile a {
+  margin-left: 16px;
+}
+body .header .header__auth .header__nav__menu a {
+  color: #040404;
+}
+body .header .header__auth .header__nav__menu input {
+  width: 160px;
+  height: 32px;
+  border: none;
+  border-radius: 4px;
+  padding: 0 8px;
+  font-size: 16px;
+}
+body .header .header__auth .header__nav__menu.active {
+  transform: translateX(0);
+}
+body .header .header__auth .header__nav__menu__btn {
+  display: none;
+  margin-left: 16px;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+body .header .header__auth .header__nav__menu__btn span {
+  width: 30px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #6DE0F6;
+  transition: all 0.5s;
+}
+body .header .header__auth .header__nav__menu__btn span:nth-of-type(2) {
+  top: calc(50% - 12px);
+}
+body .header .header__auth .header__nav__menu__btn span:nth-of-type(3) {
+  top: calc(50% + 12px);
+}
+body .header .header__auth .header__nav__menu__btn.active {
+  position: fixed;
+  top: 30px;
+  right: 20px;
+}
+body .header .header__auth .header__nav__menu__btn.active span {
+  background-color: #040404;
+}
+body .header .header__auth .header__nav__menu__btn.active span:nth-of-type(1) {
+  display: none;
+}
+body .header .header__auth .header__nav__menu__btn.active span:nth-of-type(2) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(45deg);
+}
+body .header .header__auth .header__nav__menu__btn.active span:nth-of-type(3) {
+  top: 50%;
+  transform: translate(-50%, 0%) rotate(-45deg);
+}
 body .header .header__auth button {
   margin-left: 30px;
   width: 146px;
@@ -80,6 +159,7 @@ body .main .main__exchange {
   max-width: 1280px;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding-bottom: 100px;
 }
 body .main .main__exchange .main__exchange__interaction {
   display: flex;
@@ -124,6 +204,9 @@ body .main .main__exchange .main__exchange__interaction .main__exchange__interac
   position: absolute;
   top: 100px;
   left: 290px;
+}
+body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs .main__exchange__interaction__inputs__block:nth-of-type(2) label:nth-of-type(2), body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs .main__exchange__interaction__inputs__block:nth-of-type(2) p:nth-of-type(3) {
+  display: none;
 }
 body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs .main__exchange__interaction__inputs__block {
   margin-top: 20px;
@@ -246,4 +329,190 @@ body .main .main__treasury .main__treasury__treasures .main__treasury__treasures
 }
 body .main .main__treasury .main__treasury__treasures .main__treasury__treasures__block label span {
   font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  body .header {
+    max-width: 720px;
+    grid-template-columns: 1fr 1fr;
+  }
+  body .header .header__logo label {
+    font-size: 16px;
+  }
+  body .header .header__nav {
+    display: none;
+  }
+  body .header .header__auth {
+    justify-content: center;
+  }
+  body .header .header__auth .header__nav__menu {
+    display: flex;
+  }
+  body .header .header__auth .header__nav__menu__btn {
+    display: block;
+  }
+  body .header .header__auth button {
+    width: 120px;
+    height: 32px;
+  }
+  body .main .main__exchange {
+    max-width: 720px;
+    align-items: center;
+  }
+  body .main .main__exchange .main__exchange__interaction p {
+    font-size: 14px;
+  }
+  body .main .main__exchange .main__exchange__interaction button {
+    width: 248px;
+    height: 40px;
+  }
+  body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs img {
+    width: 20px;
+    left: 160px;
+    top: 88px;
+  }
+  body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs .main__exchange__interaction__inputs__block input, body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs .main__exchange__interaction__inputs__block select {
+    width: 160px;
+    height: 32px;
+    font-size: 14px;
+    padding-left: 4px;
+  }
+  body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs .main__exchange__interaction__inputs__block label {
+    font-size: 16px;
+  }
+  body .main .main__exchange img {
+    width: 360px;
+  }
+  body .main .main__about p {
+    width: 100%;
+  }
+  body .main .main__about .main__about__block {
+    max-width: 720px;
+  }
+  body .main .main__about .main__about__block .main__about__exchangers {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  body .main .main__treasury {
+    padding-bottom: 80px;
+    width: 720px;
+  }
+  body .main .main__treasury .main__treasury__treasures {
+    grid-column-gap: 8px;
+    max-width: 720px;
+    grid-row-gap: 16px;
+  }
+  body .main .main__treasury .main__treasury__treasures .main__treasury__treasures__block {
+    width: 336px;
+    height: 56px;
+  }
+  body .main .main__treasury .main__treasury__treasures .main__treasury__treasures__block img {
+    width: 32px;
+    height: 32px;
+  }
+  body .main .main__treasury .main__treasury__treasures .main__treasury__treasures__block p {
+    font-size: 16px;
+  }
+  body .main .main__treasury .main__treasury__treasures .main__treasury__treasures__block label {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  body .main .main__treasury .main__treasury__treasures .main__treasury__treasures__block label span {
+    font-size: 16px;
+    font-weight: normal;
+  }
+}
+@media screen and (max-width: 425px) {
+  body {
+    text-align: center;
+  }
+  body .header {
+    max-width: 320px;
+  }
+  body .header .header__auth button:nth-of-type(2) {
+    display: none;
+  }
+  body .header .header__auth .header__nav__menu__btn span {
+    width: 24px;
+  }
+  body .header .header__auth .header__nav__menu__btn span:nth-of-type(2) {
+    top: calc(50% - 8px);
+  }
+  body .header .header__auth .header__nav__menu__btn span:nth-of-type(3) {
+    top: calc(50% + 8px);
+  }
+  body .main .main__exchange {
+    max-width: 320px;
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+  body .main .main__exchange img {
+    display: none;
+  }
+  body .main .main__exchange .main__exchange__interaction h1 {
+    width: 100%;
+    font-size: 26px;
+  }
+  body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs {
+    flex-direction: column;
+  }
+  body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs img {
+    display: block;
+    top: 160px;
+    left: 152px;
+    transform: rotate(90deg);
+  }
+  body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs .main__exchange__interaction__inputs__block input, body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs .main__exchange__interaction__inputs__block select {
+    width: 320px;
+    height: 40px;
+    padding-left: 8px;
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+  body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs .main__exchange__interaction__inputs__block:nth-of-type(1) label, body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs .main__exchange__interaction__inputs__block:nth-of-type(1) p:nth-of-type(2) {
+    display: none;
+  }
+  body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs .main__exchange__interaction__inputs__block:nth-of-type(2) p:nth-of-type(3) {
+    margin-top: 16px;
+  }
+  body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs .main__exchange__interaction__inputs__block:nth-of-type(2) label:nth-of-type(2), body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs .main__exchange__interaction__inputs__block:nth-of-type(2) p:nth-of-type(3) {
+    display: block;
+    text-align: center;
+  }
+  body .main .main__about h2 {
+    font-size: 22px;
+  }
+  body .main .main__about p {
+    font-size: 16px;
+  }
+  body .main .main__about .main__about__block {
+    max-width: 320px;
+  }
+  body .main .main__about .main__about__block .main__about__exchangers {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 8px;
+  }
+  body .main .main__about .main__about__block .main__about__exchangers__block img {
+    width: 32px;
+  }
+  body .main .main__about .main__about__block .main__about__exchangers__block p {
+    font-size: 14px;
+  }
+  body .main .main__treasury {
+    width: 320px;
+  }
+  body .main .main__treasury .main__treasury__treasures {
+    grid-template-columns: 1fr;
+  }
+  body .main .main__treasury .main__treasury__treasures .main__treasury__treasures__block {
+    width: 320px;
+  }
+  body .main .main__treasury .main__treasury__treasures .main__treasury__treasures__block p {
+    font-size: 12px;
+  }
+  body .main .main__treasury .main__treasury__treasures .main__treasury__treasures__block label {
+    font-size: 12px;
+  }
+  body .main .main__treasury .main__treasury__treasures .main__treasury__treasures__block label span {
+    font-size: 12px;
+  }
 }/*# sourceMappingURL=index.css.map */
