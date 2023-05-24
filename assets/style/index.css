@@ -425,6 +425,15 @@ body .main .main__treasury .main__treasury__treasures .main__treasury__treasures
   body {
     text-align: center;
   }
+  body .blur.active {
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    filter: blur(60px);
+    position: fixed;
+    top: 0;
+  }
   body .header {
     max-width: 296px;
   }
@@ -437,6 +446,7 @@ body .main .main__treasury .main__treasury__treasures .main__treasury__treasures
   }
   body .header .header__auth .header__nav__menu {
     text-align: left;
+    padding: 40px 40px;
   }
   body .header .header__auth .header__nav__menu__btn {
     margin-left: 8px;
@@ -449,6 +459,9 @@ body .main .main__treasury .main__treasury__treasures .main__treasury__treasures
   }
   body .header .header__auth .header__nav__menu__btn span:nth-of-type(3) {
     top: calc(50% + 8px);
+  }
+  body .header .header__auth .header__nav__menu__btn.active {
+    right: 6px;
   }
   body .main .main__exchange {
     max-width: 296px;
