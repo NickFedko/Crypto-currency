@@ -23,6 +23,7 @@ body {
   margin: 0;
 }
 body .header {
+  margin: 0 20px;
   padding: 30px 0;
   max-width: 1280px;
   display: grid;
@@ -148,6 +149,9 @@ body .header .header__auth button:hover {
   background-color: #6DE0F6;
   color: #040404;
 }
+body .main > * {
+  margin: 0 20px;
+}
 body .main {
   display: flex;
   align-items: center;
@@ -197,7 +201,8 @@ body .main .main__exchange .main__exchange__interaction .main__exchange__interac
   text-decoration: underline;
 }
 body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   position: relative;
 }
 body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs img {
@@ -245,6 +250,7 @@ body .main .main__about {
 }
 body .main .main__about .main__about__block {
   max-width: 1280px;
+  margin: 0 20px;
 }
 body .main .main__about h2 {
   font-size: 30px;
@@ -282,8 +288,11 @@ body .main .main__about::before {
   transform: rotate(-2deg);
   background: #CEEDFF 0 0 repeat;
 }
-body .main .main__treasury {
+body .main .main__treasury__block {
   width: 1280px;
+}
+body .main .main__treasury {
+  max-width: 100%;
   padding-bottom: 120px;
 }
 body .main .main__treasury h2 {
@@ -301,7 +310,6 @@ body .main .main__treasury .main__treasury__treasures {
 body .main .main__treasury .main__treasury__treasures .main__treasury__treasures__block {
   box-sizing: border-box;
   padding: 0 20px;
-  width: 600px;
   height: 72px;
   display: flex;
   align-items: center;
@@ -330,7 +338,283 @@ body .main .main__treasury .main__treasury__treasures .main__treasury__treasures
 body .main .main__treasury .main__treasury__treasures .main__treasury__treasures__block label span {
   font-size: 18px;
 }
+body .main .main__service {
+  max-width: 1280px;
+  padding-bottom: 80px;
+}
+body .main .main__service h2 {
+  font-size: 30px;
+  margin-bottom: 80px;
+}
+body .main .main__service .main__service__description {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+body .main .main__service .main__service__description .main__service__description__block {
+  position: relative;
+}
+body .main .main__service .main__service__description .main__service__description__block .main__service__description__block__image span {
+  position: absolute;
+  background-color: #6DE0F6;
+  border-radius: 50%;
+}
+body .main .main__service .main__service__description .main__service__description__block .main__service__description__block__image span:nth-of-type(1) {
+  width: 26px;
+  height: 26px;
+  left: 80px;
+  top: 20px;
+}
+body .main .main__service .main__service__description .main__service__description__block .main__service__description__block__image span:nth-of-type(2) {
+  width: 12px;
+  height: 12px;
+  left: 120px;
+  top: 27px;
+}
+body .main .main__service .main__service__description .main__service__description__block p {
+  width: 80%;
+}
+body .main .main__application__bg {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: 80px 0;
+}
+body .main .main__application__bg::before {
+  content: "";
+  position: absolute;
+  width: 170%;
+  height: 70%;
+  left: -10%;
+  top: 20%;
+  z-index: -1;
+  transform: rotate(2deg);
+  background: #CEEDFF 0 0 repeat;
+}
+body .main .main__application {
+  padding-bottom: 80px;
+  color: #040404;
+  width: 1280px;
+  padding-top: 64px;
+  margin: 0 20px;
+}
+body .main .main__application h2 {
+  font-size: 30px;
+}
+body .main .main__application .main__application__deals {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+body .main .main__application .main__application__deals .main__application__deals__block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+body .main .main__application .main__application__deals .main__application__deals__block img {
+  width: 32px;
+}
+body .main .main__application .main__application__deals .main__application__deals__block .main__application__deals__block__exchange {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+body .main .main__application .main__application__deals .main__application__deals__block .main__application__deals__block__exchange > img:nth-of-type(1) {
+  width: 12px;
+  margin-left: 20px;
+}
+body .main .main__application .main__application__deals .main__application__deals__block .main__application__deals__block__exchange label {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+body .main .main__application .main__application__deals .main__application__deals__block .main__application__deals__block__exchange label > * {
+  margin: 0 8px;
+}
+body .main .main__experience {
+  max-width: 1280px;
+  margin-top: 40px;
+  padding-bottom: 40px;
+}
+body .main .main__experience h2 {
+  font-size: 30px;
+  margin-bottom: 60px;
+}
+body .main .main__experience .main__experience__feedback {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 12px;
+}
+body .main .main__experience .main__experience__feedback .main__experience__feedback__block {
+  display: flex;
+  flex-direction: column;
+  background-color: #FBFBFB;
+  color: #040404;
+  padding: 24px;
+  justify-content: center;
+  border-radius: 18px;
+}
+body .main .main__experience .main__experience__feedback .main__experience__feedback__block p {
+  font-size: 18px;
+}
+body .main .main__experience .main__experience__feedback .main__experience__feedback__block label {
+  color: #A31FA9;
+}
+body .main .main__experience .main__experience__feedback .main__experience__feedback__block label:nth-of-type(1) {
+  font-size: 22px;
+}
+body .main .main__experience .main__experience__feedback .main__experience__feedback__block label:nth-of-type(2) {
+  font-size: 14px;
+}
+body .main .main__confidentiality {
+  max-width: 1280px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 40px;
+  margin-top: 120px;
+  padding-bottom: 120px;
+}
+body .main .main__confidentiality .main__confidentiality__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body .main .main__confidentiality .main__confidentiality__info h2 {
+  font-size: 30px;
+}
+body .main .main__confidentiality .main__confidentiality__info p {
+  font-size: 18px;
+}
+body .footer__bg {
+  background-color: #323232;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+body .footer {
+  margin: 0 20px;
+  max-width: 1280px;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+  grid-column-gap: 48px;
+  padding: 80px 0;
+}
+body .footer .footer__copyright .footer__copyright__logo {
+  display: flex;
+  align-items: center;
+}
+body .footer .footer__copyright .footer__copyright__logo img {
+  margin-right: 16px;
+}
+body .footer .footer__nav__main {
+  display: flex;
+  flex-direction: column;
+}
+body .footer .footer__nav__main a:nth-of-type(5) {
+  display: none;
+}
+body .footer .footer__nav__main a:nth-of-type(6) {
+  display: none;
+}
+body .footer .footer__nav__main a:nth-of-type(7) {
+  display: none;
+}
+body .footer .footer__nav__main > * {
+  margin: 8px;
+}
+body .footer .footer__nav__secondary {
+  display: flex;
+  flex-direction: column;
+}
+body .footer .footer__nav__secondary > * {
+  margin: 8px;
+}
+body .footer .footer__auth {
+  display: flex;
+}
+body .footer .footer__auth button {
+  margin-left: 30px;
+  width: 146px;
+  height: 38px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  background-color: transparent;
+  border: 2px solid #6DE0F6;
+  font-size: 18px;
+  color: #FBFBFB;
+  transition: 0.3s all ease-in-out;
+}
+body .footer .footer__auth button:hover {
+  background-color: #6DE0F6;
+  color: #040404;
+}
 
+@media screen and (max-width: 1300px) {
+  body .main .main__treasury__block {
+    max-width: 1280px;
+    width: auto;
+  }
+  body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs img {
+    left: 192px;
+  }
+  body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs .main__exchange__interaction__inputs__block input, body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs .main__exchange__interaction__inputs__block select {
+    width: 184px;
+  }
+  body .main .main__application {
+    width: auto;
+  }
+  body .main .main__application .main__application__deals {
+    gap: 24px;
+  }
+  body .main .main__application .main__application__deals .main__application__deals__block p {
+    font-size: 14px;
+  }
+  body .main .main__application .main__application__deals .main__application__deals__block .main__application__deals__block__exchange label {
+    margin-left: 8px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+  body .main .main__application .main__application__deals .main__application__deals__block .main__application__deals__block__exchange label span {
+    font-weight: normal;
+  }
+  body .main .main__application .main__application__deals .main__application__deals__block .main__application__deals__block__exchange > img:nth-of-type(1) {
+    margin-left: 8px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  body .header {
+    grid-template-columns: 1fr 1fr;
+  }
+  body .header .header__nav {
+    display: none;
+  }
+  body .header .header__auth .header__nav__menu {
+    display: flex;
+  }
+  body .header .header__auth .header__nav__menu__btn {
+    display: block;
+  }
+  body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs img {
+    left: 168px;
+  }
+  body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs .main__exchange__interaction__inputs__block input, body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs .main__exchange__interaction__inputs__block select {
+    width: 160px;
+  }
+  body .footer .footer__nav__main a:nth-of-type(5) {
+    display: block;
+  }
+  body .footer .footer__nav__main a:nth-of-type(6) {
+    display: block;
+  }
+  body .footer .footer__nav__main a:nth-of-type(7) {
+    display: block;
+  }
+  body .footer .footer__nav__secondary {
+    display: none;
+  }
+}
 @media screen and (max-width: 768px) {
   body .header {
     max-width: 720px;
@@ -420,6 +704,44 @@ body .main .main__treasury .main__treasury__treasures .main__treasury__treasures
     font-size: 16px;
     font-weight: normal;
   }
+  body .main .main__application {
+    width: 720px;
+  }
+  body .main .main__application .main__application__deals {
+    gap: 12px;
+  }
+  body .main .main__application .main__application__deals .main__application__deals__block p {
+    font-size: 12px;
+  }
+  body .main .main__application .main__application__deals .main__application__deals__block .main__application__deals__block__exchange label {
+    font-size: 12px;
+  }
+  body .main .main__experience .main__experience__feedback .main__experience__feedback__block label:nth-of-type(1) {
+    font-size: 18px;
+  }
+  body .main .main__experience .main__experience__feedback .main__experience__feedback__block p {
+    font-size: 16px;
+  }
+  body .main .main__experience .main__experience__feedback .main__experience__feedback__block label:nth-of-type(2) {
+    font-size: 12px;
+  }
+  body .main .main__confidentiality {
+    grid-column-gap: 16px;
+  }
+  body .main .main__confidentiality img {
+    width: 296px;
+  }
+  body .footer {
+    max-width: 720px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 16px;
+  }
+  body .footer .footer__nav__main > * {
+    margin: 4px;
+  }
+  body .footer .footer__nav__secondary {
+    display: none;
+  }
 }
 @media screen and (max-width: 425px) {
   body {
@@ -480,6 +802,7 @@ body .main .main__treasury .main__treasury__treasures .main__treasury__treasures
     align-items: center;
   }
   body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs {
+    display: flex;
     flex-direction: column;
   }
   body .main .main__exchange .main__exchange__interaction .main__exchange__interaction__inputs img {
@@ -552,5 +875,71 @@ body .main .main__treasury .main__treasury__treasures .main__treasury__treasures
   }
   body .main .main__treasury .main__treasury__treasures .main__treasury__treasures__block label span {
     font-size: 12px;
+  }
+  body .main .main__service {
+    width: 296px;
+    text-align: left;
+  }
+  body .main .main__service h2 {
+    font-size: 22px;
+  }
+  body .main .main__service .main__service__description {
+    grid-template-columns: 1fr;
+    grid-row-gap: 24px;
+  }
+  body .main .main__application {
+    width: 296px;
+    margin: auto;
+  }
+  body .main .main__application h2 {
+    font-size: 22px;
+  }
+  body .main .main__application .main__application__deals {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    text-align: left;
+  }
+  body .main .main__application .main__application__deals__block .main__application__deals__block__exchange {
+    flex-direction: column;
+  }
+  body .main .main__application__bg::before {
+    top: 15%;
+  }
+  body .main .main__experience {
+    width: 296px;
+  }
+  body .main .main__experience h2 {
+    font-size: 22px;
+  }
+  body .main .main__experience .main__experience__feedback {
+    text-align: left;
+    grid-template-columns: 1fr;
+    grid-row-gap: 24px;
+  }
+  body .main .main__confidentiality {
+    grid-template-columns: 1fr;
+    max-width: 296px;
+  }
+  body .footer {
+    max-width: 296px;
+    grid-template-columns: 1fr;
+    grid-row-gap: 24px;
+  }
+  body .footer > * {
+    justify-content: center;
+  }
+  body .footer .footer__copyright .footer__copyright__logo {
+    justify-content: center;
+  }
+  body .footer .footer__auth {
+    justify-content: center;
+  }
+  body .footer .footer__auth button {
+    width: 80px;
+    margin-left: 0;
+    font-size: 12px;
+  }
+  body .footer .footer__auth button:nth-of-type(2) {
+    margin-left: 12px;
   }
 }/*# sourceMappingURL=index.css.map */

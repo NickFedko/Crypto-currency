@@ -17,12 +17,15 @@ $background-main: radial-gradient(#2C35A2 1%, #252C88 16%, #1B2167 40%, #15194F 
 $background-secondary: #CEEDFF;
 $background-white: #FBFBFB;
 $background-black: #040404;
+$background-grey: #323232;
+$background-bright-blue: #6DE0F6;
 
 
 $font-color-white: #FBFBFB;
 $font-color-bright-blue: #6DE0F6;
 $font-color-black: #040404;
 $font-color-grey: #8B8B8B;
+$font-color-purple: #A31FA9;
 
 $header-auth-button-border-radius: 20px;
 $header-auth-button-bg: #6DE0F6;
@@ -34,6 +37,8 @@ $main-exchange-interaction-inputs-block-bg: #CEEDFF;
 $main-exchange-interaction-inputs-block-border-radius: 4px;
 
 $main-treasure-treasures-block-border-radius: 12px;
+
+$main-experience-feedback-block-border-radius: 18px;
 
 $font-size-h1: 40px;
 $font-size-h1-mobile: 26px;
@@ -59,6 +64,7 @@ body {
     padding: 0;
     margin: 0;
     .header {
+        margin: 0 20px;
         padding: 30px 0;
         max-width: 1280px;
         display: grid;
@@ -184,6 +190,9 @@ body {
             }
         }
     }
+    .main > * {
+        margin: 0 20px;
+    }
     .main {
         display: flex;
         align-items: center;
@@ -230,7 +239,8 @@ body {
                     }
                 }
                 .main__exchange__interaction__inputs {
-                    display: flex;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
                     position: relative;
                     img {
                         position: absolute;
@@ -281,6 +291,7 @@ body {
             align-items: center;
             .main__about__block {
                 max-width: 1280px;
+                margin: 0 20px;
             }
             h2 {
                 font-size: $font-size-h2;
@@ -318,8 +329,11 @@ body {
             transform: rotate(-2deg);
             background: $background-secondary 0 0 repeat;
         }
-        .main__treasury {
+        .main__treasury__block {
             width: 1280px;
+        }
+        .main__treasury {
+            max-width: 100%;
             padding-bottom: 120px;
             h2 {
                 font-size: $font-size-h2;
@@ -335,7 +349,6 @@ body {
                 .main__treasury__treasures__block {
                     box-sizing: border-box;
                     padding: 0 20px;
-                    width: 600px;
                     height: 72px;
                     display: flex;
                     align-items: center;
@@ -363,6 +376,322 @@ body {
                         }
                     }
                 }
+            }
+        }
+        .main__service {
+            max-width: 1280px;
+            padding-bottom: 80px;
+            h2 {
+                font-size: $font-size-h2;
+                margin-bottom: 80px;
+            }
+            .main__service__description {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                .main__service__description__block {
+                    position: relative;
+                    .main__service__description__block__image {
+                        span {
+                            position: absolute;
+                            background-color: $background-bright-blue;
+                            border-radius: 50%;
+                        }
+                        span:nth-of-type(1) {
+                            width: 26px;
+                            height: 26px;
+                            left: 80px;
+                            top: 20px;
+                        }
+                        span:nth-of-type(2) {
+                            width: 12px;
+                            height: 12px;
+                            left: 120px;
+                            top: 27px;
+                        }
+                    }
+                    p {
+                        width: 80%;
+                    }
+                }
+            }
+        }
+        .main__application__bg {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            padding: 80px 0;
+        }
+        .main__application__bg::before {
+            content: "";
+            position: absolute;
+            width: 170%;
+            height: 70%;
+            left: -10%;
+            top: 20%;
+            z-index: -1;
+            transform: rotate(2deg);
+            background: $background-secondary 0 0 repeat;
+        } 
+        .main__application {
+            padding-bottom: 80px;
+            color: $font-color-black;
+            width: 1280px;
+            padding-top: 64px;
+            margin: 0 20px;
+            h2 {
+                font-size: $font-size-h2;
+            }
+            .main__application__deals {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 32px;
+                .main__application__deals__block {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+                    img {
+                        width: 32px;
+                    }
+                    .main__application__deals__block__exchange {
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        > img:nth-of-type(1) {
+                            width: 12px;
+                            margin-left: 20px;
+                        }
+                        label {
+                            margin-left: 20px;
+                            display: flex;
+                            align-items: center;
+                            > * {
+                                margin: 0 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .main__experience {
+            max-width: 1280px;
+            margin-top: 40px;
+            padding-bottom: 40px;
+            h2 {
+                font-size: $font-size-h2;
+                margin-bottom: 60px;
+            }
+            .main__experience__feedback {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-column-gap: 12px;
+                .main__experience__feedback__block {
+                    display: flex;
+                    flex-direction: column;
+                    background-color: $background-white;
+                    color: $font-color-black;
+                    padding: 24px;
+                    justify-content: center;
+                    border-radius: $main-experience-feedback-block-border-radius;
+                    p {
+                        font-size: $font-size-large;
+                    }
+                    label {
+                        color: $font-color-purple;
+                    }
+                    label:nth-of-type(1) {
+                        font-size: $font-size-largest;
+                    }
+                    label:nth-of-type(2) {
+                        font-size: $font-size-small;
+                    }
+                }
+            }
+        }
+        .main__confidentiality {
+            max-width: 1280px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 40px;
+            margin-top: 120px;
+            padding-bottom: 120px;
+            .main__confidentiality__info {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                h2 {
+                    font-size: $font-size-h2;
+                }
+                p {
+                    font-size: $font-size-large;
+                }
+            }
+        }
+    }
+    .footer__bg {
+        background-color: $background-grey;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .footer {
+        margin: 0 20px;
+        max-width: 1280px;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+        grid-column-gap: 48px;
+        padding: 80px 0;
+        .footer__copyright {
+            .footer__copyright__logo {
+                display: flex;
+                align-items: center;
+                img {
+                    margin-right: 16px;
+                }
+            }
+        }
+        .footer__nav__main {
+            display: flex;
+            flex-direction: column;
+            a:nth-of-type(5) {
+                display: none;
+            }
+            a:nth-of-type(6) {
+                display: none;
+            }
+            a:nth-of-type(7) {
+                display: none;
+            }
+            > * {
+                margin: 8px;
+            }
+        }
+        .footer__nav__secondary {
+            display: flex;
+            flex-direction: column;
+            > * {
+                margin: 8px;
+            }
+        }
+        .footer__auth {
+            display: flex;
+            button {
+                margin-left: 30px;
+                width: 146px;
+                height: 38px;
+                box-sizing: border-box;
+                border-radius: $header-auth-button-border-radius;
+                background-color: transparent;
+                border: $header-auth-button-hover-border;
+                font-size: $font-size-large;
+                color: $font-color-white;
+                transition: 0.3s all ease-in-out;
+            }
+            button:hover {
+                background-color: $header-auth-button-bg;
+                color: $font-color-black;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    body {
+        .main {
+            .main__treasury__block {
+                max-width: 1280px;
+                width: auto;
+            }
+            .main__exchange {
+                .main__exchange__interaction {
+                    .main__exchange__interaction__inputs {
+                        img {
+                            left: 192px;
+                        }
+                        .main__exchange__interaction__inputs__block {
+                            input, select {
+                                width: 184px;
+                            }
+                        }
+                    }
+                }
+            }
+            .main__application {
+                width: auto;
+                .main__application__deals {
+                    gap: 24px;
+                    .main__application__deals__block {
+                        p {
+                            font-size: $font-size-small;
+                        }
+                        .main__application__deals__block__exchange {
+                            label {
+                                margin-left: 8px;
+                                font-size: $font-size-small;
+                                font-weight: bold;
+                                span {
+                                    font-weight: normal;
+                                }
+                            }
+                            > img:nth-of-type(1) {
+                                margin-left: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    body {
+        .header {
+            grid-template-columns: 1fr 1fr;
+            .header__nav {
+                display: none;
+            }
+            .header__auth {
+                .header__nav__menu {
+                    display: flex;
+                }
+                .header__nav__menu__btn {
+                    display: block;
+                }
+            }
+        }
+        .main {
+            .main__exchange {
+                .main__exchange__interaction {
+                    .main__exchange__interaction__inputs {
+                        img {
+                            left: 168px;
+                        }
+                        .main__exchange__interaction__inputs__block {
+                            input, select {
+                                width: 160px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer {
+            .footer__nav__main {
+                a:nth-of-type(5) {
+                    display: block;
+                }
+                a:nth-of-type(6) {
+                    display: block;
+                }
+                a:nth-of-type(7) {
+                    display: block;
+                }
+            }
+            .footer__nav__secondary {
+                display: none;
             }
         }
     }
@@ -469,6 +798,56 @@ body {
                     }
                 }
             }
+            .main__application {
+                width: 720px;
+                .main__application__deals {
+                    gap: 12px;
+                    .main__application__deals__block {
+                        p {
+                            font-size: $font-size-smallest;
+                        }
+                        .main__application__deals__block__exchange {
+                            label {
+                                font-size: $font-size-smallest;
+                            }
+                        }
+                    }
+                }
+            }
+            .main__experience {
+                .main__experience__feedback {
+                    .main__experience__feedback__block {
+                        label:nth-of-type(1) {
+                            font-size: $font-size-large;
+                        }
+                        p {
+                            font-size: $font-size-medium;
+                        }
+                        label:nth-of-type(2) {
+                            font-size: $font-size-smallest;
+                        }
+                    }
+                }
+            }
+            .main__confidentiality {
+                img {
+                    width: 296px;
+                }
+                grid-column-gap: 16px;
+            }
+        }
+        .footer {
+            max-width: 720px;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-column-gap: 16px;
+            .footer__nav__main {
+                > * {
+                    margin: 4px;
+                }
+            }
+            .footer__nav__secondary {
+                display: none;
+            }
         }
     } 
 }
@@ -534,6 +913,7 @@ body {
                         align-items: center;
                     }
                     .main__exchange__interaction__inputs {
+                        display: flex;
                         flex-direction: column;
                         img {
                             display: block;
@@ -619,6 +999,76 @@ body {
                             }
                         }
                     }
+                }
+            }
+            .main__service {
+                width: 296px;
+                text-align: left;
+                h2 {
+                    font-size: $font-size-largest;
+                }
+                .main__service__description {
+                    grid-template-columns: 1fr;
+                    grid-row-gap: 24px;
+                }
+            }
+            .main__application {
+                width: 296px;
+                margin: auto;
+                h2 {
+                    font-size: $font-size-largest;
+                }
+                .main__application__deals {
+                    grid-template-columns: 1fr;
+                    gap: 12px;
+                    text-align: left;
+                }
+                .main__application__deals__block {
+                    .main__application__deals__block__exchange {
+                        flex-direction: column;
+                    }
+                }
+            }
+            .main__application__bg::before {
+                top: 15%;
+            }
+            .main__experience {
+                width: 296px;
+                h2 {
+                    font-size: $font-size-largest;
+                }
+                .main__experience__feedback {
+                    text-align: left;
+                    grid-template-columns: 1fr;
+                    grid-row-gap: 24px;
+                }
+            }
+            .main__confidentiality {
+                grid-template-columns: 1fr;
+                max-width: 296px;
+            }
+        }
+        .footer {
+            max-width: 296px;
+            grid-template-columns: 1fr;
+            grid-row-gap: 24px;
+            > * {
+                justify-content: center;
+            }
+            .footer__copyright {
+                .footer__copyright__logo {
+                    justify-content: center;
+                }
+            }
+            .footer__auth {
+                justify-content: center;
+                button {
+                    width: 80px;
+                    margin-left: 0;
+                    font-size: $font-size-smallest
+                }
+                button:nth-of-type(2) {
+                    margin-left: 12px;
                 }
             }
         }
